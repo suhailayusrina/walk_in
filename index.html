@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk-In Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <div>
+            <h1>Walk-In Monitoring</h1>
+            <p>Customer Daily Tracking System</p>
+        </div>
+        <div class="header-icon">🚗</div>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- SUMMARY -->
+    <section class="summary-grid">
+
+        <div class="summary-card">
+            <span>Today's Walk-In</span>
+            <h2 id="todayTotal">0</h2>
+            <small>Customers</small>
+        </div>
+
+        <div class="summary-card">
+            <span>This Month</span>
+            <h2 id="monthTotal">0</h2>
+            <small>Total customers</small>
+        </div>
+
+    </section>
+
+    <!-- DAILY RECORD -->
+    <section class="panel">
+
+        <div class="section-heading">
+            <h2>Daily Monitoring</h2>
+            <span class="status-label">● Live Record</span>
+        </div>
+
+        <label for="recordDate">Select Date</label>
+        <input type="date" id="recordDate">
+
+        <label for="dayStatus">Day Status</label>
+        <select id="dayStatus">
+            <option value="Open">Open</option>
+            <option value="AHAD">AHAD</option>
+            <option value="Public Holiday">Public Holiday</option>
+            <option value="Closed">Closed</option>
+        </select>
+
+        <div class="counter-box">
+
+            <p>WALK-IN CUSTOMER</p>
+
+            <div class="counter-number" id="walkinCount">
+                0
+            </div>
+
+            <div class="counter-actions">
+                <button class="minus-btn" id="minusBtn">
+                    −
+                </button>
+
+                <button class="add-btn" id="addBtn">
+                    + ADD WALK-IN
+                </button>
+            </div>
+
+            <small>Tap once for every customer walk-in.</small>
+
+        </div>
+
+        <label for="notes">Remarks / Notes</label>
+        <textarea
+            id="notes"
+            placeholder="Example: Malaysia Day, Sunday, etc."
+            rows="3">
+        </textarea>
+
+        <p class="save-message" id="saveMessage">
+            ✓ Changes are saved automatically
+        </p>
+
+    </section>
+
+    <!-- HISTORY -->
+    <section class="panel">
+
+        <div class="section-heading">
+            <h2>Attendance History</h2>
+        </div>
+
+        <div class="history-filter">
+            <label for="historyMonth">Filter by Month</label>
+            <input type="month" id="historyMonth">
+        </div>
+
+        <div class="history-list" id="historyList">
+            <p class="empty-message">No records yet.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    Walk-In Monitoring System
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
